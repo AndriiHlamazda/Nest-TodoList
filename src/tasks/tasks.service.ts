@@ -47,8 +47,6 @@ export class TasksService {
            throw new NotFoundException(`Task with ID "${id}" not found`);
        }
 
-       console.log('русскій сєрвєр, іди нах*й!!!');
-
        return task;
    }
 
@@ -63,6 +61,7 @@ export class TasksService {
         if (!result.affected) {
             throw new NotFoundException(`Completed tasks are missing`);
         }
+
         return  this.tasksRepository.find();
     }
 

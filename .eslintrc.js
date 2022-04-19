@@ -8,7 +8,6 @@ module.exports = {
   extends: [
     'plugin:vue/vue3-essential',
     '@vue/airbnb',
-    '@vue/typescript/recommended',
   ],
 
   parserOptions: {
@@ -67,20 +66,20 @@ module.exports = {
     'comma-dangle': ['error', 'always-multiline'],
 
     // TYPESCRIPT
-    '@typescript-eslint/no-useless-constructor': 'warn',
-    '@typescript-eslint/no-unused-vars': [
-      'error',
-      {
-        args: 'none',
-        ignoreRestSiblings: true,
-      },
-    ],
-    '@typescript-eslint/explicit-function-return-type': 0,
-    '@typescript-eslint/explicit-module-boundary-types': 0,
-    '@typescript-eslint/ban-ts-comment': 0,
-    '@typescript-eslint/no-var-requires': 0,
-    '@typescript-eslint/no-explicit-any': ['error', { fixToUnknown: true }],
-    '@typescript-eslint/no-shadow': ['error'],
+    // '@typescript-eslint/no-useless-constructor': 'warn',
+    // '@typescript-eslint/no-unused-vars': [
+    //     'error',
+    //     {
+    //         args: 'none',
+    //         ignoreRestSiblings: true,
+    //     },
+    // ],
+    // '@typescript-eslint/explicit-function-return-type': 0,
+    // '@typescript-eslint/explicit-module-boundary-types': 0,
+    // '@typescript-eslint/ban-ts-comment': 0,
+    // '@typescript-eslint/no-var-requires': 0,
+    // '@typescript-eslint/no-explicit-any': ['error', { fixToUnknown: true }],
+    // '@typescript-eslint/no-shadow': ['error'],
 
     // VUE
     // 'vue/singleline-html-element-content-newline': ['error', {
@@ -95,15 +94,15 @@ module.exports = {
     'vue/order-in-components': 2,
     'vue/html-closing-bracket-newline': 2,
     'vue/mustache-interpolation-spacing': 2,
-    'vue/max-attributes-per-line': ['error', {
-      singleline: 1,
-      multiline: {
-        max: 1,
-        allowFirstLine: false,
-      },
-    }],
+    // 'vue/max-attributes-per-line': ['error', {
+    //   singleline: 1,
+    //   multiline: {
+    //     max: 1,
+    //     allowFirstLine: false,
+    //   },
+    // }],
     'vue/attributes-order': 2,
-    'vue/component-name-in-template-casing': ['error', 'kebab-case', {
+    'vue/component-name-in-template-casing': ['error', 'PascalCase' || 'kebab-case', {
       registeredComponentsOnly: true,
       ignores: [],
     }],
@@ -170,5 +169,4 @@ module.exports = {
     'vue/template-curly-spacing': 2,
     'vue/prefer-template': 2,
   },
-
 };
